@@ -1,6 +1,7 @@
+package shapes;
+import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import shapes.Rectangle;
-import static org.junit.jupiter.api.Assertions.*;
 
 public class RectangleTest {
     @Test
