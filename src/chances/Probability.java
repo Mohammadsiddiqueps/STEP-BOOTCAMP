@@ -1,4 +1,5 @@
 package chances;
+
 import java.util.Objects;
 
 public class Probability {
@@ -34,5 +35,9 @@ public class Probability {
 
     public Probability and(Probability p2) throws InvalidProbability {
         return createProbability(this.value * p2.value);
+    }
+
+    public Probability or(Probability p2) throws InvalidProbability {
+        return createProbability((value + p2.value) - value * p2.value);
     }
 }

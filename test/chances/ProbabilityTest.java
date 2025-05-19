@@ -1,7 +1,5 @@
 package chances;
-
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class ProbabilityTest {
@@ -22,5 +20,12 @@ class ProbabilityTest {
     void invalidProbability() throws InvalidProbability {
         assertThrows(InvalidProbability.class, () -> Probability.createProbability(1.2));
         assertThrows(InvalidProbability.class, () -> Probability.createProbability(-0.3));
+    }
+
+    @Test
+    void atLeastProbability() throws InvalidProbability {
+        Probability p1 = Probability.createProbability(0.5);
+        Probability p2 = Probability.createProbability(0.5);
+        assertEquals(Probability.createProbability(0.75), p1.or(p2));
     }
 }
