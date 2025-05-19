@@ -5,17 +5,27 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class RectangleTest {
     @Test
-    void emptyRectangle() {
-        assertEquals(0, Rectangle.area(0, 0));
+    void emptyAreaRectangle() {
+        Rectangle rectangle = new Rectangle(0, 0);
+        assertEquals(0, rectangle.area());
     }
 
     @Test
     void squareArea() {
-        assertEquals(100, Rectangle.area(10, 10));
+        Rectangle rectangle = new Rectangle(10, 10);
+        assertEquals(100, rectangle.area());
     }
 
     @Test
     void area() {
-        assertEquals(50, Rectangle.area(10, 5));
+        Rectangle rectangle = new Rectangle(5, 10);
+        assertEquals(50, rectangle.area());
+    }
+
+    @Test
+    void perimeter() {
+        Rectangle rectangle = new Rectangle(10, 5);
+        asse    rtEquals(30,rectangle.perimeter());
+
     }
 }
