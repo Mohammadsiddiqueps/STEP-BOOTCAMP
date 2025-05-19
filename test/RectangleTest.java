@@ -1,6 +1,5 @@
 import org.junit.jupiter.api.Test;
 import shapes.Rectangle;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 public class RectangleTest {
@@ -23,9 +22,21 @@ public class RectangleTest {
     }
 
     @Test
+    void areaSquare() {
+        Rectangle rectangle = new Rectangle(5);
+        assertEquals(25, rectangle.area());
+    }
+
+    @Test
+    void squarePerimeter() {
+        Rectangle square = new Rectangle(10);
+        assertEquals(40, square.perimeter());
+    }
+
+    @Test
     void perimeter() {
         Rectangle rectangle = new Rectangle(10, 5);
-        asse    rtEquals(30,rectangle.perimeter());
+        assertEquals(30, rectangle.perimeter());
 
     }
 }
