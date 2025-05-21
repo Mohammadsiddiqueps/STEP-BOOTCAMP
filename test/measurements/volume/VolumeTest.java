@@ -1,4 +1,4 @@
-package measurements;
+package measurements.volume;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -19,7 +19,7 @@ class VolumeTest {
         Volume volumeInLitre = new Volume(1, VolumeUnits.LITRES);
         Volume volumeInGallon = new Volume(1, VolumeUnits.GALLON);
         assertEquals(new Volume(1, VolumeUnits.LITRES), volumeInLitre.convertToLitre());
-        assertEquals(new Volume(1 / 3.78, VolumeUnits.LITRES), volumeInGallon.convertToLitre());
+        assertEquals(new Volume( 3.78, VolumeUnits.LITRES), volumeInGallon.convertToLitre());
     }
 
     @Test

@@ -1,8 +1,9 @@
-package measurements;
+package measurements.volume;
+import measurements.Measurement;
 
 import java.util.Objects;
 
-public class Volume {
+public class Volume  {
     private final double value;
     private final VolumeUnits unit;
 

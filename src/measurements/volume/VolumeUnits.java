@@ -1,4 +1,4 @@
-package measurements;
+package measurements.volume;
 
 public enum VolumeUnits {
     GALLON(3.78),
